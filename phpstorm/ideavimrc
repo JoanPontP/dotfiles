@@ -1,0 +1,90 @@
+set scrolloff=8
+set number
+set idearefactormode=keep
+set ideajoin
+set surround
+set ignorecase
+set smartcase
+set easymotion
+map <leader>F <Plug>(easymotion-s)
+map <leader>f <Plug>(easymotion-f)
+set clipboard=unnamed
+set showmode
+set ReplaceWithRegister
+set commentary
+" set which-key
+" set timeoutlen=5000
+set highlightedyank
+let g:highlightedyank_highlight_color = "rgba(80, 160, 80, 155)"
+let g:highlightedyank_highlight_duration = "100"
+set NERDTree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
+
+let mapleader = " "
+
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+nnoremap \e :e ~/.ideavimrc<CR>
+
+"toggle file explorer
+nmap <leader>gf :NERDTreeToggle<CR>
+nmap <S-Enter> O<Esc>
+" reuse ñ as ^
+nmap ñ ^
+" enclose in quotations
+:nnoremap <Leader>q" ciw""<Esc>P
+:nnoremap <Leader>q' ciw''<Esc>P
+" get y to be coherent with other
+nnoremap Y y$
+" escape insert mode
+:imap jk <Esc>
+:imap kj <Esc>
+:imap jj <Esc>
+:imap kk <Esc>
+" system clipboard
+vmap <leader>y "+y
+vmap <leader>d "+d
+nmap <leader>y "+yy
+nmap <leader>p "+p
+nmap <leader>P "+P
+vmap <leader>p "+p
+vmap <leader>P "+P
+
+" actions
+nnoremap gc :action GotoClass<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gp :action GotoSuperMethod<CR>
+nnoremap gt :action GotoTest<CR>
+nnoremap gb :action Back<CR>
+nnoremap gf :action Forward<CR>
+nnoremap i<CR><Esc> <leader>,
+" window actions
+"nnoremap <C-\> :action SplitVertically<CR>
+"nnoremap <C--> :action SplitHorizontally<CR>
+"nnoremap <c-=> :action Unsplit<CR>
+"nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <C-h> <c-w>h
+nnoremap <C-l> <c-w>l
+nnoremap <C-j> <c-w>j
+nnoremap <C-k> <c-w>k
+" editing actions
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
+nnoremap <Leader>=  :action ReformatCode<CR>
+nnoremap <leader>c :action CommentByLineComment<CR>
+nnoremap <s-TAB> :action PreviousTab<CR>
+nnoremap <TAB> :action NextTab<CR>
+nmap <leader>bd <action>(CloseEditor)
+nmap <leader>i <action>(Generate)
+nmap <leader>m <action>(Git.Menu)
+nmap <leader>s <action>(QuickChangeScheme)
+nmap <leader>/ <action>(ShowErrorDescription)
+nmap <leader>e <action>(GotoNextError)
+"nnoremap <leader><leader> <C-Tab>
+vnoremap < <gv
+vnoremap > >gv
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
