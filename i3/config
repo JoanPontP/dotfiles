@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Menlo for Powerline 10
+font pango:JetBrainsMono Nerd Font 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -225,7 +225,7 @@ default_border pixel 2
 exec_always xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal
 
 # set wallpaper
-exec_always nitrogen --random --set-scaled ~/Pictures/Wallpapers/ --head=0 && nitrogen --random --set-scaled ~/Pictures/Wallpapers/ --head=1 
+exec_always nitrogen --random --set-scaled ~/Pictures/Wallpapers/ --head=0 && nitrogen --random --set-scaled ~/Pictures/Wallpapers/ --head=1
 
 # change esc keybinding to block mayus
 # exec_always systemctl start input-remapper && input-remapper-control --command autoload
