@@ -185,7 +185,7 @@ bindsym $mod+r mode "resize"
 
 bar {
 	status_command $HOME/.local/bin/bumblebee-status \
-		-m bluetooth2 nic cpu memory disk battery datetime system \
+		-m bluetooth nic cpu memory disk battery datetime system \
 		-p datetime.format="%d/%m/%Y %H:%M" \
 		-t dracula-powerline
     position top
