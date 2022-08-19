@@ -3,6 +3,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$HOME/bin/PhpStorm2021.3/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
+export PATH=~/.composer/vendor/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -105,16 +106,21 @@ source $ZSH/oh-my-zsh.sh
 neofetch
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"=
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias szsh="source $HOME/.zshrc"
 alias ..="cd .."
-alias .2="cd ../.."
-alias .3="cd ../../.."
-alias .4="cd ../../../.."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 alias ls="exa -lia --group-directories-first --color=always"
 alias l.="exa -a | grep '^\.'"
 alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
+alias gs="git status"
+alias ga="git add"
+alias gcom="git commit"
+alias gpush="git push"
+alias gpull="git pull"
 
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
