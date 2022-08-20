@@ -3,7 +3,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$HOME/bin/PhpStorm2021.3/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$HOME/.composer/vendor/bin:$PATH
+export PATH=$HOME/.config/composer/vendor/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
