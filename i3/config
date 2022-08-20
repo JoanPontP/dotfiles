@@ -229,5 +229,6 @@ exec_always nitrogen --random --set-scaled ~/Pictures/Wallpapers/ --head=0 && ni
 
 # change esc keybinding to block mayus
 # exec_always systemctl start input-remapper && input-remapper-control --command autoload
-exec_always input-remapper-control --command autoload
+# exec_always input-remapper-control --command autoload
+exec_always setxkbmap -option caps:swapescape
 exec_always compton
